@@ -24,19 +24,20 @@
 ----------------------------------------------------------------------------------------------------
 
 ## Project Folder Structure
-
+```
 User_Management_Automation/
 ├── create_users.sh               # Main automation script
 ├── users.txt                     # Input file: username;group1,group2
 ├── README.md                     # Project documentation
-
+```
 # System-generated directories (NOT inside project folder):
+```
 /var/secure/
 └── user_passwords.txt            # Real secure credentials (root only, 600)
 
 /var/log/
 └── user_management.log           # Full audit log (root only, 600)
-
+```
 ----------------------------------------------------------------------------------------------------
 
 ## How to clone from GitHub
