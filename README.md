@@ -30,7 +30,7 @@ User_Management_Automation/
 ├── users.txt                     # Input file: username;group1,group2
 ├── README.md                     # Project documentation
 ```
-# System-generated directories (NOT inside project folder):
+## System-generated directories (NOT inside project folder):
 ```
 /var/secure/
 └── user_passwords.txt            # Real secure credentials (root only, 600)
@@ -182,7 +182,7 @@ leelavamsi:mxf=by7@cYkA
 2025-11-13T10:00:14Z [INFO] Processing complete. Passwords saved to /var/secure/user_passwords.txt, logs to /var/log/user_management.log
 
 ```
-# Verifying User Details (User Information Commands)
+## Verifying User Details (User Information Commands)
 
 After running the user management automation script, you should verify whether each user, group, and home directory was created correctly. Linux provides multiple built-in commands that allow you to confirm this.
 
