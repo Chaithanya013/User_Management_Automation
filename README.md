@@ -279,13 +279,13 @@ sudo ls -l /var/log/user_management.log
 sudo tail -n 50 /var/log/user_management.log
 
 # Inspect home directories and permissions
-sudo ls -ld /home/light /home/siyoni /home/manoj
-sudo stat /home/light
+sudo ls -ld /home/rahul /home/girish /home/leelavamsi
+sudo stat /home/rahul
 
 # Verify user and group entries
-getent passwd light
-getent group light
-id light
+getent passwd rahul
+getent group rahul
+id rahul
 ```
 
 **Important:** `/var/secure` is `700` and files are `600` — only root can read them. This is by design.
