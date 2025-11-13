@@ -1,4 +1,4 @@
-# User Management Automation (sysOps Challenge)
+# User Management Automation (SysOps Challenge)
 
 ## Project Overview
 **User Management Automation** is a Bash script (`create_users.sh`) that automates onboarding by creating Linux user accounts from a simple input file. It ensures each new developer account is created consistently and securely:
