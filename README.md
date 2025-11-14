@@ -30,7 +30,7 @@ User_Management_Automation/
 ├── users.txt                     # Input file: username;group1,group2
 ├── README.md                     # Project documentation
 ```
-## System-generated directories (NOT inside project folder):
+## System-Generated Directories (Not Inside Project Folder):
 ```
 /var/secure/
 └── user_passwords.txt            # Real secure credentials (root only, 600)
@@ -62,7 +62,7 @@ User_Management_Automation/
 
 ```
 ----------------------------------------------------------------------------------------------------
-## How to clone from GitHub
+## How to Clone from GitHub
 If you have a GitHub repo (replace with your repo URL):
 ```bash
 git clone https://github.com/<your-username>/<your-repo>.git
@@ -70,7 +70,7 @@ cd <your-repo>
 ```
 ----------------------------------------------------------------------------------------------------
 
-## Preparation and safe setup (exact commands)
+## Preparation and Safe Setup 
 > Run these commands from the project folder. Use `sudo` where indicated.
 
 1. Make the script executable:
@@ -93,7 +93,7 @@ sudo chmod 600 /var/secure/user_passwords.txt /var/log/user_management.log
 
 ----------------------------------------------------------------------------------------------------
 
-## Input file format (`users.txt`) — example
+## Input file format (`users.txt`) 
 ```
 # username; groups
 girish;sudo,dev,www-data
@@ -122,11 +122,11 @@ sudo ./create_users.sh -f users.txt --dry-run
 
 ----------------------------------------------------------------------------------------------------
 
-## What the script does
+## What the Script does
 
 1. **Preflight checks**: runs as root; ensures `/var/secure` exists and `/etc/shadow` is writable; creates files with secure perms.
 2. **Read input**: reads each line, strips BOM and whitespace, skips comments, validates format.
-3. **Username handling**: validates usernames against conservative rules (lowercase, digits, `_`, `-`); optionally normalizes to lowercase.
+3. **Username handling**: validates usernames against conservative rules (lowercase, digits, `_`, `-`); optionally normalises to lowercase.
 4. **Groups**: ensures primary group (username) exists; creates supplementary groups as needed.
 5. **User creation**: creates user with `useradd` (home created); if user exists, ensures home exists and corrects ownership/perms.
 6. **Home dir**: ensures `/home/username` present, `chown username:username`, `chmod 700`.
@@ -137,7 +137,7 @@ sudo ./create_users.sh -f users.txt --dry-run
 
 ----------------------------------------------------------------------------------------------------
 
-## Expected results / sample outputs
+## Expected Results / Sample Outputs
 
 After running the script with the example `users.txt`, you should see:
 
@@ -288,7 +288,6 @@ These verification steps demonstrate the successful creation and configuration o
 ----------------------------------------------------------------------------------------------------
 
 ## Viewing the root directory and verification commands
-Trainers often ask to inspect system artifacts — use these commands (as root):
 
 ```bash
 # Confirm secure directory and files
@@ -326,6 +325,7 @@ id rahul
 ----------------------------------------------------------------------------------------------------
 
 ## Troubleshooting 
+
 - `chpasswd` fails with `pam_chauthtok()` — check `/etc/shadow` permissions and filesystem status:
 ```bash
 ls -l /etc/shadow
